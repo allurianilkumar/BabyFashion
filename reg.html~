@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BabyFashion : Registration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    div#socialmedia {
+      padding-right: 5%;
+    }
+    #mynav{
+      font-size: 23px !important;
+      line-height: 1.42857143 !important;
+      background: url(logo.gif) no-repeat left top;
+    }
+
+    .logo{
+      border-bottom: 1px solid #E4B46C;
+    }
+    .container.my-context {
+      background-color: rgba(224, 207, 207, 0.79);
+      min-height: 50%;
+    }
+  .error {color: #FF0000;}
+  </style>
+</head>
+<body>
+
+<div class="row">
+  <div class="col-md-6" style="margin-left: 100px">
+    <marquee><h4 style="color: red">Get a better understanding of your baby’s unique and special needs for dress</h4></marquee>
+  </div>
+  <div class="pull-right" style="margin-right: 8%">
+   <a href="#"><i class="fa fa-facebook" style="font-size:30px;color:rgb(10, 0, 255);"></i></a>
+    <a href="#"><i class="fa fa-twitter" style="font-size:30px;color:rgb(50, 196, 224);"></i></a>
+    <a href="#"><i class="fa fa-instagram" style="font-size:30px;color:rgb(20, 231, 37);"></i></a>
+  </div>
+</div>
+<nav id="mynav" style="border-bottom: 4px black solid;border-top: 1px #fff solid" class="navbar navbar-default">
+  <ul class="nav navbar-nav pull-right" style="margin-right: 6%;margin-top: 20px">
+    <li><a href="./index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="placeorder.html">Place Order</a></li>
+    <li><a href="./reg.html">Register</a></li>
+    <li><a href="./login.html">Login</a></li></a></li>
+  </ul>
+</nav>
+<div class="container my-context">
+  <div class="row">
+<section class="registration" style="background-color: rgb(243, 177, 238);">
+  <div class="regi">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1 text-center"><b><h2 style="color: green;">Registration</h2></b></div>
+    <div class="col-md-6 col-md-push-2"><hr>
+    <h2>Fill the following details.</h2>
+    <form method="post" name="myForm" action="" onsubmit="return validateForm()" method="post">  
+      E-mail: <input type="text" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+      <span class="error">*</span>
+      <br><br>
+      Name: <input type="text" name="username" id="name">
+      <span class="error">*</span>
+      <br><br>
+      password: <input type="password" name="password" id="password">
+      <span class="error">*</span>
+      <br><br>
+      Mobile: <input type="text" name="mobile" id="mobile">
+      <span class="error">*</span>
+      <br><br>
+      Gender:
+      <input type="radio" name="gender" value="female">Female
+      <input type="radio" name="gender" value="male" checked>Male
+      <br><br>
+      <span class="error">*</span><label><input type="checkbox">I Agree</label>
+      <br><br><hr>
+      <input type="submit" name="submit" value="Submit">  
+    </form>
+    </div>
+    </div>
+  </div>
+  </section>
+  </div>  
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+  <h3 class="text-center">All rights reserved &copy; kumarallurianil@gmail.com</h3>
+  </div>
+</nav>
+<script>
+function validateForm() {
+ email = document.getElementById("email").value;
+  name = document.getElementById("name").value;
+  password = document.getElementById("password").value;
+  mobile = document.getElementById("mobile").value;
+ if (email == "") {
+     alert("Email must be filled out");
+     return false;
+ } else if (name == "") {
+     alert("Name must be filled out");
+     return false;
+ }else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  } else if(mobile.length != 10) {
+   alert("Mobile must be at least 10 characters long.");  
+  return false;
+ }  
+}
+</script>
+</body>
+</html>
+
+
